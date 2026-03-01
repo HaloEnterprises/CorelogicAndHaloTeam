@@ -128,6 +128,23 @@
 
     <div class="cursor" id="cursor"></div>
 
+    <!-- System Error Overlay -->
+    <div class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center p-6 text-center select-none cursor-default">
+        <div class="max-w-md w-full">
+            <div class="w-12 h-12 border-4 border-black mb-8 mx-auto flex items-center justify-center font-black text-2xl">!</div>
+            <h1 class="text-xl md:text-2xl font-bold tracking-tighter mb-4 uppercase">Something went wrong, this is unusual</h1>
+            <div class="w-full h-[1px] bg-black/10 my-6"></div>
+            <p class="text-xs uppercase tracking-[0.3em] opacity-40 leading-relaxed">
+                The requested resource is currently unavailable or has been restricted by the administrator. <br><br>
+                Error Code: 0x80041001<br>
+                Status: TERMINATED
+            </p>
+        </div>
+        <!-- Decorative "glitch" lines -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-black/5 animate-pulse" style="top: 20%"></div>
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-black/5 animate-pulse" style="top: 80%; animation-delay: 1s"></div>
+    </div>
+
     <!-- Animated Background -->
     <div class="blob-bg">
         <div class="blob w-96 h-96 top-[-10%] left-[-10%]"></div>
@@ -290,4 +307,3 @@
     </script>
 </body>
 </html>
-
